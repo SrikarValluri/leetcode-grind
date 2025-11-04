@@ -1,4 +1,4 @@
-# max profit
+# best-time-to-buy-and-sell-stock
 
 1) use 2 pointers
 2) start iterating the right pointer
