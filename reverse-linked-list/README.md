@@ -1,0 +1,3 @@
+# reverse linked list
+
+Basically I did this maybe 3 months ago so I might have some slight memory. However, the big thing was keeping track of prev, current, and next. I set prev to None initially because that's what it was (the null pointer). current started at node 1, and I set the next which is node 2 during the loop. By first setting next pointer, then updating current pointer to prev, then updating prev, then updating current to next, we are reversing all the pointer values before the next node. This is good, because we don't want to mess up iterating through the linked list normally while also reversing it in the process.
