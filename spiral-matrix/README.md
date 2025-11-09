@@ -2,24 +2,6 @@
 
 I took the opportunity to do some general 2D array practice (traversing across rows and columns, backwards etc.). GPT generated some really important scenarios that I'd like to show here:
 
-For the following matrix, rows and cols:
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-rows = len(matrix)
-cols = len(matrix[0])
-
-
-To perform a diagonal traversal such all elements on same i + j diagonal (1 | 2 4 | 3 5 7), etc. DO THIS:
-
-for s in range(rows + cols - 1):
-    for i in range(rows):
-        j = s - i
-        if 0 <= j < cols:
-            print(matrix[i][j], end=" ")
-# Output: 1 2 4 3 5 7 6 8 9
 
 
 I have NO idea how this works on first or second glance. I need to walk my brain through it multiple times for me to understand it but I don't get it right now.
@@ -53,3 +35,6 @@ while top <= bottom and left <= right:
 So I need to figure out how this works exactly. And then, I'd say I'm prepared to tackle any loops through 2d arrays after understanding these two (the diagonal and the spiral (both inward and outward)).
 
 Will revisit this tomorrow.
+
+
+UPDATE: I understood the spiral matrix solution and implemented without looking. It's actually quite intuitive with the initial logic. The two main points that I missed is, 1) the while condition (what to do there) and secondly how to ensure we don't repeat (by incrementing the top, right, bottom, and left pointers so that the box becomes smaller). After understanding those two things, it was straightforward.
