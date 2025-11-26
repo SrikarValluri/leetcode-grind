@@ -1,0 +1,3 @@
+# product of array except self
+
+Since we cannot use the divide operator (that would make this easy), we would need to keep track of the multiplicative result of every other number other than that particular number for each number. To do this, we can individually calculate all the products from the left side, all of the products from the right side, and then combine those results such that res[i] = left[i-1] * right[i+1]. Instead of using more space, we calculate this directly in one array by multiplying from the left every value to the left of the ith number, and same with the right. This way, we never actually multiply the value by itself, but we still multiply it by everything else.
