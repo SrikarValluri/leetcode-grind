@@ -1,0 +1,3 @@
+# minimum window substring
+
+I approached this problem similar to longest substring without repeating characters. However, there's a nuance to this problem in the sense that the characters don't necessarily need to be directly next to each other. My approach was to use two dictionaries, one that is static (fixed counts for all characters in t-string) and one that is dynamic (keeps track of the current sequence). The sliding window happens whenever we hit a match of all the characters being present in the substring. We increase the left pointer until we no longer have those characters in the substring (because the dictionary comparison in the code is no longer true), and we have a min_str variable that always gets the smallest string possible by calculating the minimum.
